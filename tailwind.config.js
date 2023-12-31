@@ -11,7 +11,14 @@ export default {
     "./node_modules/preline/preline.js"
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        'light': '#f4f4f4',
+        'bue': '#5796ff',
+        'brown': '#2d2d2d',
+        'light-blue': '#c2dafe'
+      }
+    },
   },
   plugins: [require("preline/plugin")],
 }
