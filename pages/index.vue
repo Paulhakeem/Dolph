@@ -96,7 +96,11 @@
         </div>
       </section>
     </div>
-    jjjjj
+   <!-- end of home page -->
+
+   <div>
+    <whyus/>
+   </div>
   </div>
 </template>
 
