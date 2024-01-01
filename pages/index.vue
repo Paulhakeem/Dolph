@@ -26,7 +26,7 @@
               <div class="px-2">
                 <input
                   type="text"
-                  class="w-full ring-0 border-b-2 border-b-heading px-2 outline-none first-letter:uppercase"
+                  class="w-full ring-0 border-b-2 border-b-heading px-2 outline-none first-letter:uppercase caret-blue"
                 />
               </div>
             </div>
@@ -40,7 +40,7 @@
               <div class="px-2">
                 <input
                   type="text"
-                  class="w-full ring-0 border-b-2 border-b-heading px-2 outline-none first-letter:uppercase"
+                  class="w-full ring-0 border-b-2 border-b-heading px-2 outline-none first-letter:uppercase caret-blue"
                 />
               </div>
             </div>
@@ -54,7 +54,7 @@
               <div class="px-2">
                 <input
                   type="text"
-                  class="w-full ring-0 border-b-2 border-b-heading px-2 outline-none first-letter:uppercase"
+                  class="w-full ring-0 border-b-2 border-b-heading px-2 outline-none first-letter:uppercase caret-blue"
                 />
               </div>
             </div>
@@ -68,7 +68,7 @@
               <div class="px-2">
                 <input
                   type="text"
-                  class="w-full ring-0 border-b-2 border-b-heading px-2 outline-none uppercase"
+                  class="w-full ring-0 border-b-2 border-b-heading px-2 outline-none uppercase caret-blue"
                 />
               </div>
             </div>
@@ -100,6 +100,7 @@
 
    <div>
     <whyus/>
+     <savemoney/>
    </div>
   </div>
 </template>
