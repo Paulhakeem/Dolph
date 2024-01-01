@@ -1,5 +1,6 @@
 <template>
-  <div class="bg-bg w-full h-auto">
+  <main>
+    <div class="bg-bg w-full h-auto">
     <div class="flex flex-wrap justify-center gap-20 pb-32">
       <div class="relative w-2/6">
         <div class="absolute inset-x-0 top-0">
@@ -49,6 +50,9 @@
       </div>
     </div>
   </div>
+
+  <popular/>
+  </main>
 </template>
 
 <script setup></script>

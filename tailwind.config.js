@@ -19,7 +19,8 @@ export default {
         'light-blue': '#c2dafe',
         'heading': '#2d2d2d',
         'box': '#f6f6f6',
-        'bg': '#3c4353'
+        'bg': '#3c4353',
+        'cars': '#edf0f7'
       }
     },
   },
