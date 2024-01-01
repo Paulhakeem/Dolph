@@ -2,7 +2,7 @@
   <div>
     <!-- ========== HEADER ========== -->
     <header
-      class="flex flex-wrap sm:justify-start sm:flex-nowrap z-50 w-full bg-light text-sm py-3 sm:py-0"
+      class="flex flex-wrap sm:justify-start sm:flex-nowrap z-50 w-full bg-heading text-sm py-3 sm:py-0"
     >
       <nav
         class="relative max-w-[85rem] w-full mx-auto px-4 sm:flex sm:items-center sm:justify-between sm:px-6 lg:px-8"
@@ -10,10 +10,10 @@
       >
         <div class="flex items-center justify-between">
           <a
-            class="flex-none text-xl font-semibold text-white"
+            class="flex-none text-2xl font-bold text-white"
             href="#"
             aria-label="Brand"
-            >Brand</a
+            >P.R.E</a
           >
           <div class="sm:hidden">
             <button
@@ -65,29 +65,29 @@
             class="flex flex-col gap-y-4 gap-x-0 mt-5 sm:flex-row sm:items-center sm:justify-end sm:gap-y-0 sm:gap-x-7 sm:mt-0 sm:ps-7"
           >
             <a
-              class="font-medium text-gray-600 sm:py-6"
+              class="font-medium text-light sm:py-6"
               href="#"
               aria-current="page"
               >Home</a
             >
             <a
-              class="font-medium text-gray-600 hover:text-white sm:py-6"
+              class="font-medium text-light hover:text-white sm:py-6"
               href="#"
               >About Us</a
             >
             <a
-              class="font-medium text-gray-600 hover:text-white sm:py-6"
+              class="font-medium text-light hover:text-white sm:py-6"
               href="#"
               >Our Fleet</a
             >
             <a
-              class="font-medium text-gray-600 hover:text-white sm:py-6"
+              class="font-medium text-light hover:text-white sm:py-6"
               href="#"
               >Contacts</a
             >
 
             <a
-              class="flex text-gray-600 items-center gap-x-2 font-medium text-white/[.8] hover:text-white sm:border-s sm:border-white/[.3] sm:my-6 sm:ps-6"
+              class="flex text-light items-center gap-x-2 font-medium text-white/[.8] hover:text-white sm:border-s sm:border-white/[.3] sm:my-6 sm:ps-6"
               href="#"
             >
               <svg
@@ -113,6 +113,9 @@
     </header>
     <!-- ========== END HEADER ========== -->
 
+
+
+
     <slot />
 
     <!-- fotter section -->
@@ -122,10 +125,10 @@
       <div class="grid grid-cols-2 md:grid-cols-4 gap-20 mb-10">
         <div class="col-span-full hidden lg:col-span-1 lg:block">
           <a
-            class="flex-none text-xl font-semibold dark:text-white dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
+            class="flex-none text-2xl font-bold dark:text-white dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
             href="#"
             aria-label="Brand"
-            >Brand</a
+            >P.R.E</a
           >
           <p class="mt-3 text-xs sm:text-sm text-gray-600 dark:text-gray-400">
             © 2024 Hakeem Paul.

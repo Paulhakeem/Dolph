@@ -13,10 +13,13 @@ export default {
   theme: {
     extend: {
       colors: {
-        'light': '#f4f4f4',
-        'bue': '#5796ff',
+        'light': '#e6e9f1',
+        'blue': '#5796ff',
         'brown': '#2d2d2d',
-        'light-blue': '#c2dafe'
+        'light-blue': '#c2dafe',
+        'heading': '#2d2d2d',
+        'box': '#f6f6f6',
+        'bg': '#3c4353'
       }
     },
   },
