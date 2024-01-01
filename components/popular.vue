@@ -267,6 +267,9 @@
         </div>
       </div>
     </div>
+
+    <!-- winter -->
+    <winter/>
   </section>
 </template>
 
