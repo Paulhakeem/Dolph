@@ -28,7 +28,6 @@ body {
         text-align: center;
     }
    #imageposition {
-    position: relative;
     padding-top: 4em;
    }
    #button {
@@ -82,7 +81,7 @@ body {
     }  */
 /* money section */
     #imageposition {
-        width: 100dvh;
+        width: 90dvh;
        
        } 
 /* popular */

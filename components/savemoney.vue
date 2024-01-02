@@ -2,7 +2,7 @@
   <main>
     <div class="bg-bg w-full h-auto">
     <div class="flex flex-wrap justify-center gap-20 pb-32">
-      <div id="imageposition" class="relative w-2/6">
+      <div id="imageposition" class="relative w-96">
         <div class="absolute inset-x-0 top-0">
           <img
             src="../assets/images/lambo.jpg"
@@ -33,7 +33,7 @@
         </div>
       </div>
 
-      <div id="money" class="pt-24 md:pt-4">
+      <div id="money" class="pt-16">
         <h4 class="text-light font-black text-4xl text-pretty">
           Save money <br />
           with our rental
