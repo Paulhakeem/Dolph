@@ -1,10 +1,9 @@
 <template>
   <section>
     <div id="popular" class="flex flex-wrap justify-center gap-8 pt-8 bg-light h-auto">
-      <div class="pt-8 w-72 mb-10">
+      <div id="popular1" class="pt-8 w-72 mb-10">
         <h4 class="font-bold text-4xl text-heading">
-          Popular <br />
-          Cars
+          Popular Cars
         </h4>
         <p class="text-pretty text-sm text-brown pt-6">
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus,
@@ -50,7 +49,7 @@
 
 
       <div id="carsButton" class="flex flex-wrap justify-center gap-4 mb-10 pt-8">
-        <div class="bg-white w-80 rounded-md">
+        <div id="carbox1" class="bg-white w-80 rounded-md">
           <h6 class="text-heading font-bold px-4 pt-3">Lamborghini Noire</h6>
           <img src="../assets/images/lamborghini.jpg" alt="" />
           <div class="bg-cars flex justify-center gap-10 p-2 mx-2 rounded-md">
@@ -122,7 +121,7 @@
           </div>
         </div>
 
-        <div class="bg-white w-80 rounded-md">
+        <div id="carbox1" class="bg-white w-80 rounded-md">
           <h6 class="text-heading font-bold px-4 pt-3">BMW i4</h6>
           <img src="../assets/images/mercedence.jpg" alt="" />
           <div class="bg-cars flex justify-center gap-10 p-2 mx-2 rounded-md">
@@ -194,7 +193,7 @@
           </div>
         </div>
 
-        <div class="bg-white w-80 rounded-md">
+        <div id="carbox1" class="bg-white w-80 rounded-md">
           <h6 class="text-heading font-bold px-4 pt-3">Toyota Helix</h6>
           <img src="../assets/images/hammer.jpg" alt="" />
           <div class="bg-cars flex justify-center gap-10 p-2 mx-2 rounded-md">

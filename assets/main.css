@@ -80,8 +80,37 @@ body {
 
     #homeSection {
         padding-top: 5em;
-
     }
-    
-   
+/* money section */
+    #imageposition {
+        width: 36.5dvh;
+       
+       }
+/* popular */
+
+#popular {
+    text-align: center;
+}
+#popular h4{
+    padding-top: 1em;
+    line-height: 1.2em;
+    font-size: 4.5em;
+    text-align: center;
+  
+}
+#popular p{
+    line-height: 1.2em;
+    font-size: 1.7em;
+    text-align: center;
+  
+}
+#popular1 {
+    width: 100%;
+}
+#carsButton {
+    padding-top: 2px;
+}
+#carbox1 {
+    width: 70%;
+}
   }
