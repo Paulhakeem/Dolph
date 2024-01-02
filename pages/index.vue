@@ -3,7 +3,7 @@
     <div id="home"
       class="bg-[url('../assets/images/home.jpg')] bg-cover bg-no-repeat bg-center h-screen"
     >
-      <div id="home1" class="text-center pt-28 text-balance select-none mb-14 xl:pt-24">
+      <div id="home1" class="text-center pt-28 text-balance select-none mb-14 xl:pt-16">
         <h1 class="text-7xl font-black text-light stroke-white stroke-2 xl:text-6xl">
           Premium car rental
         </h1>
@@ -14,7 +14,7 @@
         </button>
       </div>
 
-      <section id="homeSection" class="px-3">
+      <section id="homeSection" class="px-3 xl:pt-6">
         <div class="bg-[#e6e9f1] w-full rounded-md h-auto mt-44">
           <div class="flex flex-wrap gap-2 py-4 justify-center">
             <div class="bg-white rounded-md w-72 h-20 justify-center">
