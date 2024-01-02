@@ -1,10 +1,16 @@
 <template>
   <div>
-    <div id="home"
+    <div
+      id="home"
       class="bg-[url('../assets/images/home.jpg')] bg-cover bg-no-repeat bg-center h-screen"
     >
-      <div id="home1" class="text-center pt-28 text-balance select-none mb-14 xl:pt-16">
-        <h1 class="text-7xl font-black text-light stroke-white stroke-2 sm:text-3xl md:2xl xl:text-6xl">
+      <div
+        id="home1"
+        class="text-center pt-28 text-balance select-none mb-14 xl:pt-16"
+      >
+        <h1
+          class="text-7xl font-black text-light stroke-white stroke-2 sm:text-3xl md:2xl xl:text-6xl"
+        >
           Premium car rental
         </h1>
         <button
@@ -72,36 +78,38 @@
                 />
               </div>
             </div>
-
-            <div id='homeSectionButton'
-              class="bg-blue rounded-md w-44 h-20 cursor-pointer text-center"
-            >
-            <div class="flex justify-center items-center pt-3">
-                <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="32"
-                height="32"
-                viewBox="0 0 24 24"
+            <nuxt-link to="signUp">
+              <div
+                id="homeSectionButton"
+                class="bg-blue rounded-md w-44 h-20 cursor-pointer text-center"
               >
-                <path
-                  fill="#ffffff"
-                  d="M5 8h14V6H5zm0 0V6zM3 22V4h3V2h2v2h8V2h2v2h3v7.675q-.475-.225-.975-.375T19 11.075V10H5v10h6.3q.175.55.413 1.05t.562.95zm15 1q-2.075 0-3.537-1.463T13 18q0-2.075 1.463-3.537T18 13q2.075 0 3.538 1.463T23 18q0 2.075-1.463 3.538T18 23m1.675-2.625l.7-.7L18.5 17.8V15h-1v3.2z"
-                />
-              </svg>
-            </div>
-              
-              <button class="text-white">Book Now</button>
-            </div>
+                <div class="flex justify-center items-center pt-3">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="32"
+                    height="32"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      fill="#ffffff"
+                      d="M5 8h14V6H5zm0 0V6zM3 22V4h3V2h2v2h8V2h2v2h3v7.675q-.475-.225-.975-.375T19 11.075V10H5v10h6.3q.175.55.413 1.05t.562.95zm15 1q-2.075 0-3.537-1.463T13 18q0-2.075 1.463-3.537T18 13q2.075 0 3.538 1.463T23 18q0 2.075-1.463 3.538T18 23m1.675-2.625l.7-.7L18.5 17.8V15h-1v3.2z"
+                    />
+                  </svg>
+                </div>
+
+                <button class="text-white">Book Now</button>
+              </div>
+            </nuxt-link>
           </div>
         </div>
       </section>
     </div>
-   <!-- end of home page -->
+    <!-- end of home page -->
 
-   <div>
-    <whyus/>
-     <savemoney/>
-   </div>
+    <div>
+      <whyus />
+      <savemoney />
+    </div>
   </div>
 </template>
 
