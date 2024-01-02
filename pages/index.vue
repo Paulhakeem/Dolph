@@ -3,8 +3,8 @@
     <div id="home"
       class="bg-[url('../assets/images/home.jpg')] bg-cover bg-no-repeat bg-center h-screen"
     >
-      <div id="home1" class="text-center pt-28 text-balance select-none mb-14 xl:pt-16">
-        <h1 class="text-7xl font-black text-light stroke-white stroke-2 sm:text-3xl md:2xl xl:text-6xl">
+      <div id="home1" class="text-center pt-28 text-balance select-none mb-14 lg:pt-32 xl:pt-16">
+        <h1 class="text-7xl font-black text-light stroke-white stroke-2 sm:text-3xl md:2xl lg:text-5xl xl:text-6xl">
           Premium car rental
         </h1>
         <button
