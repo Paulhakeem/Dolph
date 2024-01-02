@@ -6,63 +6,6 @@ body {
     scroll-behavior: smooth;
 }
 
-@media (max-width: 640px) { 
-    #home {
-        width: 100%;
-        height: 100vh;
-        padding-bottom: 6em;
-
-    }
-    #us {
-        padding-top: 12em;
-    }
-    #money h4, p{
-        padding-top: 4em;
-        text-align: center;
-    }
-    #moneybutton {
-        text-align: center;
-    }
-   #imageposition {
-    position: relative;
-    width: 100dvh;
-    padding-top: 4em;
-   }
-   #button {
-    gap: 10px;
-   }
-   #button1 p {
-    padding-top: 1px;
-   }
-   #button2 p {
-    padding-top: 1px;
-   }
-    #popular {
-        text-align: center;
-    }
-  #popularSVG {
-    display: flex;
-    justify-content: center;
-  }
-  #carsButton button {
-    width: 50%;
-    height: 40%;
-    margin-top: 3em;
-  }
-
-  
-  #footer {
-    max-width: 100%;
-    margin-top: 3em;
-  }
-  #footer h4{
-    text-align: center;
-  }
-  #renters {
-    margin-top: -2rem;
-  }
-
- }
 
 @media (max-width: 768px) { 
     #home {
@@ -71,11 +14,14 @@ body {
         padding-bottom: 6em;
 
     }
+    #home h1{
+       font-size: 4em;
+    }
     #us {
-        padding-top: 12em;
+        padding-top: 14em;
     }
     #money h4, p{
-        padding-top: 4em;
+        padding-top: 3em;
         text-align: center;
     }
     #moneybutton {
@@ -83,7 +29,6 @@ body {
     }
    #imageposition {
     position: relative;
-    width: 100dvh;
     padding-top: 4em;
    }
    #button {
@@ -137,7 +82,7 @@ body {
     }  */
 /* money section */
     #imageposition {
-        width: 36.5dvh;
+        width: 100dvh;
        
        } 
 /* popular */
