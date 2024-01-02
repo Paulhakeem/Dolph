@@ -33,7 +33,7 @@
         </div>
       </div>
 
-      <div id="money" class="pt-24 md:pt-12">
+      <div id="money" class="pt-24 md:pt-4">
         <h4 class="text-light font-black text-4xl text-pretty">
           Save money <br />
           with our rental
