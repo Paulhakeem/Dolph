@@ -14,7 +14,7 @@
           Open Fleet
         </button>
 
-        <div id="popularSVG" class="flex gap-2 pt-16 xl:pt-10 sm:hidden xl:hidden">
+        <div id="popularSVG" class="flex gap-2 pt-16 xl:pt-10 md:hidden xl:hidden">
           <div>
             <svg
               xmlns="http://www.w3.org/2000/svg"
