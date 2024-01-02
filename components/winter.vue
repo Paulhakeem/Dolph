@@ -2,7 +2,7 @@
   <div id="winterbg"
     class="bg-[url('../assets/images/winter.jpg')] bg-cover bg-no-repeat bg-center h-96"
   >
-    <div id="winter" class="text-center pt-52 mb-6">
+    <div id="winter" class="text-center pt-52 mb-6 lg:pt-40">
       <h4 class="text-light font-black text-4xl">
         Get a winter discount <br />
         for all Ferrari

@@ -6,6 +6,64 @@ body {
     scroll-behavior: smooth;
 }
 
+@media (max-width: 640px) { 
+    #home {
+        width: 100%;
+        height: 100vh;
+        padding-bottom: 6em;
+
+    }
+    #us {
+        padding-top: 12em;
+    }
+    #money h4, p{
+        padding-top: 4em;
+        text-align: center;
+    }
+    #moneybutton {
+        text-align: center;
+    }
+   #imageposition {
+    position: relative;
+    width: 100dvh;
+    padding-top: 4em;
+   }
+   #button {
+    gap: 10px;
+   }
+   #button1 p {
+    padding-top: 1px;
+   }
+   #button2 p {
+    padding-top: 1px;
+   }
+    #popular {
+        text-align: center;
+    }
+  #popularSVG {
+    display: flex;
+    justify-content: center;
+  }
+  #carsButton button {
+    width: 50%;
+    height: 40%;
+    margin-top: 3em;
+  }
+
+  
+  #footer {
+    max-width: 100%;
+    margin-top: 3em;
+  }
+  #footer h4{
+    text-align: center;
+  }
+  #renters {
+    margin-top: -2rem;
+  }
+
+ }
+
 @media (max-width: 768px) { 
     #home {
         width: 100%;
@@ -49,7 +107,7 @@ body {
     height: 40%;
     margin-top: 3em;
   }
-  /* footer section */
+
   
   #footer {
     max-width: 100%;
@@ -67,46 +125,34 @@ body {
 
  /* big devices */ 
 
- /* @media (min-width: 768px, max-width: 1020 ) { 
+ @media (max-width: 1020px ) { 
     /* home */
-    /* #home1 {
+    #home1 {
         padding-top: 10em;
 
     }
-    #home1 h1{
-        font-size: 7em;
 
-    }
-
-    #homeSection {
+    /* #homeSection {
         padding-top: 5em;
-    } */
+    }  */
 /* money section */
-    /* #imageposition {
+    #imageposition {
         width: 36.5dvh;
        
-       } */
+       } 
 /* popular */
 
-/* #popular {
+#popular {
     text-align: center;
 }
 #popular h4{
     padding-top: 1em;
     line-height: 1.2em;
-    font-size: 4.5em;
+    font-size: 3em;
     text-align: center;
   
-} */
-/* #popular p{
-    line-height: 1.2em;
-    font-size: 1.7em;
-    text-align: center;
-  
-}
-#popular1 {
-    width: 100%;
-}
+} 
+
 #carsButton {
     padding-top: 2px;
 }
@@ -114,16 +160,16 @@ body {
     width: 70%;
 }
 #carbox1 h6{
-    font-size: 2em;
+    font-size: 1.4em;
 }
 #popularSVG {
     display: flex;
     justify-content: center;
-  } */
+  } 
 
   /* winter */
-/* #winter h4{
-    font-size: 4em;
+#winter h4{
+     /* font-size: 4em; */
     padding-top: 2px;
     line-height: 1.2em;
    }
@@ -134,4 +180,4 @@ body {
     width: 40%;
     font-size: 1.4em;
    }
-  } */ 
+  } 
