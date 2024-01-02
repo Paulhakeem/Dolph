@@ -1,6 +1,6 @@
 <template>
   <section>
-    <div class="flex flex-wrap justify-center gap-8 pt-8 bg-light h-auto">
+    <div id="popular" class="flex flex-wrap justify-center gap-8 pt-8 bg-light h-auto">
       <div class="pt-8 w-72 mb-10">
         <h4 class="font-bold text-4xl text-heading">
           Popular <br />
@@ -15,7 +15,7 @@
           Open Fleet
         </button>
 
-        <div class="flex gap-2 pt-16">
+        <div id="popularSVG" class="flex gap-2 pt-16">
           <div>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -49,7 +49,7 @@
 
 
 
-      <div class="flex flex-wrap gap-4 mb-10 pt-8">
+      <div class="flex flex-wrap justify-center gap-4 mb-10 pt-8">
         <div class="bg-white w-80 rounded-md">
           <h6 class="text-heading font-bold px-4 pt-3">Lamborghini Noire</h6>
           <img src="../assets/images/lamborghini.jpg" alt="" />

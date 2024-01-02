@@ -536,12 +536,12 @@
                 class="flex-none text-xl font-semibold dark:text-white"
                 href="#"
                 aria-label="Brand"
-                >Brand</a
+                >P.R.E</a
               >
               <p
                 class="mt-1 text-xs sm:text-sm text-gray-600 dark:text-gray-400"
               >
-                © 2022 Preline.
+                © 2022 Hakeem paul.
               </p>
             </div>
 

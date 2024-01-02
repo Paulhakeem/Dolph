@@ -2,15 +2,15 @@
   <main>
     <div class="bg-bg w-full h-auto">
     <div class="flex flex-wrap justify-center gap-20 pb-32">
-      <div class="relative w-2/6">
+      <div id="imageposition" class="relative w-2/6">
         <div class="absolute inset-x-0 top-0">
           <img
             src="../assets/images/lambo.jpg"
             alt=""
             class="origin-top-left"
           />
-          <div class="flex flex-wrap gap-4 ml-4">
-            <div
+          <div id="button" class="flex justify-center gap-4 px-2">
+            <div id="button1"
               class="flex justify-center gap-4 border border-1 border-light p-3 rounded-md w-52"
             >
               <p class="text-4xl font-bold text-light">+200</p>
@@ -20,7 +20,7 @@
               </p>
             </div>
 
-            <div
+            <div id="button2"
               class="flex justify-center gap-4 border border-1 border-light p-3 rounded-md w-52"
             >
               <p class="text-4xl font-bold text-light">50k</p>
@@ -33,7 +33,7 @@
         </div>
       </div>
 
-      <div class="pt-24">
+      <div id="money" class="pt-24">
         <h4 class="text-light font-black text-4xl text-pretty">
           Save money <br />
           with our rental
@@ -42,11 +42,13 @@
           Lorem ipsum dolor sit amet consectetur adipisicing elit. <br />
           Reprehenderit, itaque?
         </p>
-        <button
+        <div id="moneybutton">
+          <button 
           class="bg-light-blue rounded-full p-2 w-44 mt-10 text-md font-medium text-heading"
         >
           Booking Now
         </button>
+        </div>
       </div>
     </div>
   </div>
