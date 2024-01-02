@@ -113,4 +113,11 @@ body {
 #carbox1 {
     width: 70%;
 }
+#carbox1 h6{
+    font-size: 2em;
+}
+#popularSVG {
+    display: flex;
+    justify-content: center;
+  }
   }
