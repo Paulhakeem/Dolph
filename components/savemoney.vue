@@ -2,7 +2,7 @@
   <main>
     <div class="bg-bg w-full h-auto">
     <div class="flex flex-wrap justify-center gap-20 pb-32">
-      <div id="imageposition" class="relative w-2/6 sm:w-[32dvh] md:w-[36.5dvh]">
+      <div id="imageposition" class="relative w-2/6">
         <div class="absolute inset-x-0 top-0">
           <img
             src="../assets/images/lambo.jpg"
