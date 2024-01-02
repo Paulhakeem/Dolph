@@ -125,7 +125,7 @@ body {
 
  /* big devices */ 
 
- @media (max-width: 1020px ) { 
+ @media (max-width: 1024px ) { 
     /* home */
     #home1 {
         padding-top: 10em;
@@ -181,3 +181,59 @@ body {
     font-size: 1.4em;
    }
   } 
+
+
+  @media (max-width: 1280px) { 
+    #winter h4{
+        /* font-size: 4em; */
+       padding-top: 2px;
+       line-height: 1.2em;
+      }
+      #winterbg {
+       height: 50vh;
+      }
+      #winterbg button {
+       width: 40%;
+       font-size: 1.4em;
+      }
+         /* home */
+    #home1 {
+        padding-top: 10em;
+
+    }
+
+    /* #homeSection {
+        padding-top: 5em;
+    }  */
+/* money section */
+    #imageposition {
+        width: 36.5dvh;
+       
+       } 
+/* popular */
+
+#popular {
+    text-align: center;
+}
+#popular h4{
+    padding-top: 1em;
+    line-height: 1.2em;
+    font-size: 3em;
+    text-align: center;
+  
+} 
+
+#carsButton {
+    padding-top: 2px;
+}
+#carbox1 {
+    width: 70%;
+}
+#carbox1 h6{
+    font-size: 1.4em;
+}
+#popularSVG {
+    display: flex;
+    justify-content: center;
+  } 
+   }
