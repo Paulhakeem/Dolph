@@ -1,7 +1,7 @@
 <template>
   <div class="px-6 pt-16">
     <!-- Features -->
-    <div id="us" class="max-w-[85rem] px-4 py-6 sm:px-6 lg:px-8 lg:py-14 mx-auto">
+    <div id="us" class="max-w-[85rem] px-4 py-6 sm:px-6 lg:px-8 lg:py-14 mx-auto sm:pt-8">
       <div class="relative p-6 md:p-16">
         <!-- Grid -->
         <div
