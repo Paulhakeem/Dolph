@@ -20,7 +20,9 @@
         </button>
       </div>
 
-      <section id="homeSection" class="px-3">
+
+<!-- form -->
+      <form id="homeSection" class="px-3">
         <div class="bg-[#e6e9f1] w-full rounded-md h-auto mt-44">
           <div class="flex flex-wrap gap-2 py-4 justify-center">
             <div class="bg-white rounded-md w-72 h-20 justify-center">
@@ -102,7 +104,7 @@
             </nuxt-link>
           </div>
         </div>
-      </section>
+      </form>
     </div>
     <!-- end of home page -->
 
