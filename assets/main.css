@@ -67,9 +67,9 @@ body {
 
  /* big devices */ 
 
- @media (max-width: 1024px) { 
+ /* @media (min-width: 768px, max-width: 1020 ) { 
     /* home */
-    #home1 {
+    /* #home1 {
         padding-top: 10em;
 
     }
@@ -80,15 +80,15 @@ body {
 
     #homeSection {
         padding-top: 5em;
-    }
+    } */
 /* money section */
-    #imageposition {
+    /* #imageposition {
         width: 36.5dvh;
        
-       }
+       } */
 /* popular */
 
-#popular {
+/* #popular {
     text-align: center;
 }
 #popular h4{
@@ -97,8 +97,8 @@ body {
     font-size: 4.5em;
     text-align: center;
   
-}
-#popular p{
+} */
+/* #popular p{
     line-height: 1.2em;
     font-size: 1.7em;
     text-align: center;
@@ -119,10 +119,10 @@ body {
 #popularSVG {
     display: flex;
     justify-content: center;
-  }
+  } */
 
   /* winter */
-#winter h4{
+/* #winter h4{
     font-size: 4em;
     padding-top: 2px;
     line-height: 1.2em;
@@ -134,4 +134,4 @@ body {
     width: 40%;
     font-size: 1.4em;
    }
-  }
+  } */ 
