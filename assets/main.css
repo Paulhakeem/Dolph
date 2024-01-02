@@ -120,4 +120,18 @@ body {
     display: flex;
     justify-content: center;
   }
+
+  /* winter */
+#winter h4{
+    font-size: 4em;
+    padding-top: 2px;
+    line-height: 1.2em;
+   }
+   #winterbg {
+    height: 50vh;
+   }
+   #winterbg button {
+    width: 40%;
+    font-size: 1.4em;
+   }
   }
