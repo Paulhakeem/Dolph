@@ -1,8 +1,8 @@
 <template>
   <section>
     <div id="popular" class="flex flex-wrap justify-center gap-8 pt-8 bg-light h-auto">
-      <div id="popular1" class="pt-8 w-72 mb-10 xl:w-full">
-        <h4 class="font-bold text-4xl text-heading xl:text-5xl">
+      <div id="popular1" class="pt-8 w-72 mb-10 xl:w-full xl:text-center">
+        <h4 class="font-bold text-4xl text-heading xl:text-4xl">
           Popular Cars
         </h4>
         <p class="text-pretty text-sm text-brown pt-6">
