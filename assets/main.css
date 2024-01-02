@@ -44,4 +44,44 @@ body {
     display: flex;
     justify-content: center;
   }
+  #carsButton button {
+    width: 50%;
+    height: 40%;
+    margin-top: 3em;
+  }
+  /* footer section */
+  
+  #footer {
+    max-width: 100%;
+    margin-top: 3em;
+  }
+  #footer h4{
+    text-align: center;
+  }
+  #renters {
+    margin-top: -2rem;
+  }
+
  }
+
+
+ /* big devices */ 
+
+ @media (max-width: 1024px) { 
+    /* home */
+    #home1 {
+        padding-top: 10em;
+
+    }
+    #home1 h1{
+        font-size: 7em;
+
+    }
+
+    #homeSection {
+        padding-top: 5em;
+
+    }
+    
+   
+  }

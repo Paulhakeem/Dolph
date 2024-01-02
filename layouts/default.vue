@@ -120,7 +120,7 @@
 
     <!-- fotter section -->
 
-    <footer class="w-full max-w-[85rem] py-10 px-4 sm:px-6 lg:px-8 mx-auto">
+    <footer id="footer" class="w-full max-w-[85rem] py-10 px-4 sm:px-4 lg:px-8 mx-auto">
       <!-- Grid -->
       <div class="grid grid-cols-2 md:grid-cols-4 gap-20 mb-10">
         <div class="col-span-full hidden lg:col-span-1 lg:block">
@@ -144,7 +144,7 @@
             For Renters
           </h4>
 
-          <div class="mt-3 grid space-y-3 text-sm">
+          <div id="renters" class="mt-3 grid space-y-3 text-sm">
             <p>
               <a
                 class="inline-flex gap-x-2 text-gray-600 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-200 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
@@ -199,7 +199,7 @@
             Resources
           </h4>
 
-          <div class="mt-3 grid space-y-3 text-sm">
+          <div id="renters" class="mt-3 grid space-y-3 text-sm">
             <p>
               <a
                 class="inline-flex gap-x-2 text-gray-600 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-200 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
@@ -246,14 +246,14 @@
         </div>
         <!-- End Col -->
 
-        <div>
+        <div id="contacts">
           <h4
             class="text-xs font-black text-gray-900 uppercase dark:text-gray-100"
           >
             Contact Us
           </h4>
 
-          <div class="mt-3 grid space-y-3 text-sm">
+          <div id="renters" class="mt-3 grid space-y-3 text-sm">
             <p>
               <a
                 class="inline-flex gap-x-2 text-gray-600 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-200 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
@@ -283,7 +283,7 @@
             +254-792-857-288
           </h4>
 
-          <div class="mt-3 grid space-y-3 text-sm">
+          <div id class="mt-3 space-y-3 text-sm">
             <p>
               <a
                 class="inline-flex gap-x-2 text-gray-600 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-200 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
@@ -302,6 +302,8 @@
         </div>
         <!-- End Col -->
       </div>
+
+
       <!-- End Grid -->
 
       <div class="pt-5 mt-5 border-t border-gray-200 dark:border-gray-700">
