@@ -63,7 +63,7 @@
               </div>
 
               <!-- Form -->
-              <form>
+              <form @submit.prevent="signIn">
                 <div class="grid gap-y-4">
                   <!-- Form Group -->
                   <div>
@@ -74,13 +74,22 @@
                     >
                     <div class="relative">
                       <input
+                        v-model="userInfo.email"
                         type="email"
                         id="email"
                         name="email"
                         class="py-3 px-4 block w-full border border-1 border-gray-200 rounded-lg text-sm focus:border-blue focus:outline-none disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400 dark:focus:ring-gray-600"
-                        required
                         aria-describedby="email-error"
                       />
+                      <div
+                        class="input-errors"
+                        v-for="error of v$.email.$errors"
+                        :key="error.$uid"
+                      >
+                        <p class="error-msg text-red-500 italic">
+                          {{ error.$message }}
+                        </p>
+                      </div>
                       <div
                         class="hidden absolute inset-y-0 end-0 flex items-center pointer-events-none pe-3"
                       >
@@ -117,13 +126,22 @@
                     >
                     <div class="relative">
                       <input
+                        v-model="userInfo.password"
                         type="password"
                         id="password"
                         name="password"
                         class="py-3 px-4 block w-full border border-1 border-gray-200 rounded-lg text-sm focus:border-blue focus:outline-none disabled:opacity-50 dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400 dark:focus:ring-gray-600"
-                        required
                         aria-describedby="password-error"
                       />
+                      <div
+                        class="input-errors"
+                        v-for="error of v$.password.$errors"
+                        :key="error.$uid"
+                      >
+                        <p class="error-msg text-red-500 italic">
+                          {{ error.$message }}
+                        </p>
+                      </div>
                       <div
                         class="hidden absolute inset-y-0 end-0 flex items-center pointer-events-none pe-3"
                       >
@@ -146,48 +164,6 @@
                       id="password-error"
                     >
                       8+ characters required
-                    </p>
-                  </div>
-                  <!-- End Form Group -->
-
-                  <!-- Form Group -->
-                  <div>
-                    <label
-                      for="confirm-password"
-                      class="block text-sm mb-2 dark:text-white"
-                      >Confirm Password</label
-                    >
-                    <div class="relative">
-                      <input
-                        type="password"
-                        id="confirm-password"
-                        name="confirm-password"
-                        class="py-3 px-4 block w-full border border-1 border-gray-200 rounded-lg text-sm focus:border-blue focus:outline-none disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400 dark:focus:ring-gray-600"
-                        required
-                        aria-describedby="confirm-password-error"
-                      />
-                      <div
-                        class="hidden absolute inset-y-0 end-0 flex items-center pointer-events-none pe-3"
-                      >
-                        <svg
-                          class="h-5 w-5 text-red-500"
-                          width="16"
-                          height="16"
-                          fill="currentColor"
-                          viewBox="0 0 16 16"
-                          aria-hidden="true"
-                        >
-                          <path
-                            d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4zm.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"
-                          />
-                        </svg>
-                      </div>
-                    </div>
-                    <p
-                      class="hidden text-xs text-red-600 mt-2"
-                      id="confirm-password-error"
-                    >
-                      Password does not match the password
                     </p>
                   </div>
                   <!-- End Form Group -->
@@ -232,6 +208,34 @@
   </div>
 </template>
 
-<script setup></script>
+<script setup>
+import { useVuelidate } from "@vuelidate/core";
+import { required, email } from "@vuelidate/validators";
+
+const userInfo = ref({
+  email: "",
+  password: "",
+});
+
+const rules = {
+  email: { required, email },
+  password: { required },
+};
+
+const v$ = useVuelidate(rules, userInfo);
+
+const signIn = async () => {
+  const result = await v$.value.$validate();
+  if (result) {
+    useNuxtApp().$toast.success("SignIn successfull!", {
+      timeout: 2000,
+    });
+  } else {
+    useNuxtApp().$toast.error("Make sure you fill all the required area!", {
+      timeout: 2000,
+    });
+  }
+};
+</script>
 
 <style lang="scss" scoped></style>
