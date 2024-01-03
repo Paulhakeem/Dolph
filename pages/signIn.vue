@@ -63,7 +63,7 @@
               </div>
 
               <!-- Form -->
-              <form @submit.prevent="signIn">
+              <form @submit.prevent="useAuth.signIn">
                 <div class="grid gap-y-4">
                   <!-- Form Group -->
                   <div>
@@ -74,14 +74,15 @@
                     >
                     <div class="relative">
                       <input
-                        v-model="userInfo.email"
+                        v-model="useAuth.email"
                         type="email"
                         id="email"
                         name="email"
                         class="py-3 px-4 block w-full border border-1 border-gray-200 rounded-lg text-sm focus:border-blue focus:outline-none disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400 dark:focus:ring-gray-600"
                         aria-describedby="email-error"
+                        required
                       />
-                      <div
+                      <!-- <div
                         class="input-errors"
                         v-for="error of v$.email.$errors"
                         :key="error.$uid"
@@ -89,7 +90,7 @@
                         <p class="error-msg text-red-500 italic">
                           {{ error.$message }}
                         </p>
-                      </div>
+                      </div> -->
                       <div
                         class="hidden absolute inset-y-0 end-0 flex items-center pointer-events-none pe-3"
                       >
@@ -126,14 +127,15 @@
                     >
                     <div class="relative">
                       <input
-                        v-model="userInfo.password"
+                        v-model="useAuth.password"
                         type="password"
                         id="password"
                         name="password"
                         class="py-3 px-4 block w-full border border-1 border-gray-200 rounded-lg text-sm focus:border-blue focus:outline-none disabled:opacity-50 dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400 dark:focus:ring-gray-600"
                         aria-describedby="password-error"
+                        required
                       />
-                      <div
+                      <!-- <div
                         class="input-errors"
                         v-for="error of v$.password.$errors"
                         :key="error.$uid"
@@ -141,7 +143,7 @@
                         <p class="error-msg text-red-500 italic">
                           {{ error.$message }}
                         </p>
-                      </div>
+                      </div> -->
                       <div
                         class="hidden absolute inset-y-0 end-0 flex items-center pointer-events-none pe-3"
                       >
@@ -176,6 +178,7 @@
                         name="remember-me"
                         type="checkbox"
                         class="shrink-0 mt-0.5 border-gray-200 rounded text-blue-600 pointer-events-none focus:ring-blue-500 dark:bg-gray-800 dark:border-gray-700 dark:checked:bg-blue-500 dark:checked:border-blue-500 dark:focus:ring-offset-gray-800"
+                        required
                       />
                     </div>
                     <div class="ms-3">
@@ -209,33 +212,11 @@
 </template>
 
 <script setup>
-import { useVuelidate } from "@vuelidate/core";
-import { required, email } from "@vuelidate/validators";
-
-const userInfo = ref({
-  email: "",
-  password: "",
+import { useAuthStore } from "../store/auth";
+const useAuth = useAuthStore();
+useHead({
+  titleTemplate: "%s - Signin",
 });
-
-const rules = {
-  email: { required, email },
-  password: { required },
-};
-
-const v$ = useVuelidate(rules, userInfo);
-
-const signIn = async () => {
-  const result = await v$.value.$validate();
-  if (result) {
-    useNuxtApp().$toast.success("SignIn successfull!", {
-      timeout: 2000,
-    });
-  } else {
-    useNuxtApp().$toast.error("Make sure you fill all the required area!", {
-      timeout: 2000,
-    });
-  }
-};
 </script>
 
 <style lang="scss" scoped></style>

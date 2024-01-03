@@ -115,4 +115,8 @@
   </div>
 </template>
 
-<script setup></script>
+<script setup>
+useHead({
+  titleTemplate: "%s - Home",
+});
+</script>

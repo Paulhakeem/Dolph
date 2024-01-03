@@ -4,55 +4,63 @@ import {
   GoogleAuthProvider,
   signInWithPopup,
 } from "firebase/auth";
-import toast from "~/plugin/toast";
+import { toast } from "vue3-toastify";
+
 export default function () {
   const { $auth } = useNuxtApp();
-  const provider = new GoogleAuthProvider()
   const user = useState("firebaseUser", () => null);
+  const provider = new GoogleAuthProvider();
 
-
-  const createUser = async(email, password) => {
+  const  createUser = async (email, password) => {
     try {
-        const userCredentials = await createUserWithEmailAndPassword($auth, email, password)
-    if(userCredentials) {
-        user.value = userCredentials.user
-        useNuxtApp().$toast.success('User Created Successfully!')
+      const userCredentials = await createUserWithEmailAndPassword(
+        $auth,
+        email,
+        password
+      );
+      if (userCredentials) {
+        user.value = userCredentials.user;
+        useNuxtApp().$toast.success("User Created Successfully");
+      }
+    } catch (err) {
+      useNuxtApp().$toast.error('An error occurs');
     }
-    } catch(error) {
-        useNuxtApp().$toast.error('An error occurs!!')
-    }
-  }
+  };
 
-//   login
+  //   login
 
-const loginUser = async(email, password) => {
+  const loginUser = async (email, password) => {
     try {
-        const userCredentials = await signInWithEmailAndPassword($auth, email, password)
-    if(userCredentials) {
-        user.value = userCredentials.user
-        useNuxtApp().$toast.success('Login Successfully!')
+      const userCredentials = await signInWithEmailAndPassword(
+        $auth,
+        email,
+        password
+      );
+      if (userCredentials) {
+        user.value = userCredentials.user;
+        toast.success("Login Successfully!");
+      }
+    } catch (error) {
+      toast.error("An error occurs!!");
     }
-    } catch(error) {
-        useNuxtApp().$toast.error('An error occurs!!')
+  };
+
+  const googleLogin = async (provider) => {
+    try {
+      const userCredentials = signInWithPopup($auth, provider);
+      if (userCredentials) {
+        user.value = userCredentials.user;
+        useNuxtApp().$toast.success("Welcome back!");
+      }
+    } catch (error) {
+      useNuxtApp().$toast.error("An error occurs!!");
     }
-  }
+  };
 
-
-  const googleLogin = async(provider) => {
-    try{
-        const userCredentials = signInWithPopup($auth, provider)
-        if(userCredentials) {
-            user.value = userCredentials.user
-            useNuxtApp().$toast.success('Welcome back!')
-        }
-    }catch(error) {
-        useNuxtApp().$toast.error('An error occurs!!')
-    }
-  }
-
-  return{
+  return {
     createUser,
     loginUser,
-    googleLogin
-  }
+    googleLogin,
+    provider,
+  };
 }

@@ -1,6 +1,6 @@
 export default defineNuxtPlugin(() => {
     addRouteMiddleware("auth", () => {
-        const {$auth} = useNuxtApp()
+        const { $auth } = useNuxtApp()
 
         console.log($auth);
         if(!$auth?.currentUser?.uid) {

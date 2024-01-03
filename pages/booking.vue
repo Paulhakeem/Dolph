@@ -8,8 +8,8 @@
 const {user} = useFirebaseAuth()
 
 definePageMeta({
-  middleware: ["auth"],
-});
+  middleware: ["auth"]
+})
 useHead({
   titleTemplate: "%s - booking",
 });
