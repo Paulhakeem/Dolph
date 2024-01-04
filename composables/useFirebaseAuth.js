@@ -8,10 +8,10 @@ import { toast } from "vue3-toastify";
 
 export default function () {
   const { $auth } = useNuxtApp();
-  const user = useState("firebaseUser", () => null);
   const provider = new GoogleAuthProvider();
+  const user = useState("firebaseUser", () => null);
 
-  const  createUser = async (email, password) => {
+  const createUser = async (email, password) => {
     try {
       const userCredentials = await createUserWithEmailAndPassword(
         $auth,
@@ -23,7 +23,7 @@ export default function () {
         useNuxtApp().$toast.success("User Created Successfully");
       }
     } catch (err) {
-      useNuxtApp().$toast.error('An error occurs');
+      useNuxtApp().$toast.error(err.message);
     }
   };
 

@@ -1,7 +1,18 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+import { resolve } from "path";
 export default defineNuxtConfig({
   devtools: { enabled: true },
-  modules: ['@pinia/nuxt',],
+  imports: {
+    dirs: ['stores'],
+  },
+  modules: [
+    [
+      '@pinia/nuxt',
+      {
+        autoImports: ['defineStore', 'acceptHMRUpdate'],
+      },
+    ],
+  ],
   postcss: {
     plugins: {
       tailwindcss: {},
@@ -18,9 +29,14 @@ export default defineNuxtConfig({
       FIREBASE_APP_ID: process.env.FIREBASE_APP_ID,
     },
   },
-  css: [
-    '~/assets/main.css',
-    '@fortawesome/fontawesome-svg-core/styles.css'
-  ],
-
-})
+  css: ["~/assets/main.css", "@fortawesome/fontawesome-svg-core/styles.css"],
+ 
+  alias: {
+    "@": resolve(__dirname, "/"),
+  },
+  app: {
+    head: {
+      title: "PRE car rental",
+    },
+  },
+});

@@ -63,7 +63,7 @@
               </div>
 
               <!-- Form -->
-              <form @submit.prevent="useAuth.signUp">
+              <form @submit.prevent="registerUser">
                 <div class="grid gap-y-4">
                   <!-- Form Group -->
                   <div>
@@ -74,7 +74,7 @@
                     >
                     <div class="relative">
                       <input
-                        v-model="useAuth.email"
+                        v-model="email"
                         type="email"
                         id="email"
                         name="email"
@@ -102,7 +102,7 @@
                     </div>
                     <div class="relative">
                       <input
-                        v-model="useAuth.password"
+                        v-model="password"
                         type="password"
                         id="password"
                         name="password"
@@ -110,8 +110,6 @@
                         aria-describedby="password-error"
                         required
                       />
-                    
-                    
                     </div>
                   </div>
                   <!-- End Form Group -->
@@ -138,7 +136,7 @@
                     type="submit"
                     class="w-full py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-blue text-white hover:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
                   >
-                    Sign Un
+                    Sign Up
                   </button>
                 </div>
               </form>
@@ -152,8 +150,20 @@
 </template>
 
 <script setup>
-import { useAuthStore } from "../store/auth";
-const useAuth = useAuthStore();
+import { toast } from "vue3-toastify";
+const { createUser } = useFirebaseAuth();
+const email = useState("emailSignin", () => "");
+const password = useState("passwordSignin", () => "");
+// function
+const registerUser = async () => {
+  const user = await createUser(email.value, password.value);
+  if (user) {
+    toast.error("User created successfull!!");
+  }
+  email.value = "";
+  password.value = "";
+  await navigateTo({ path: "/booking" });
+};
 useHead({
   titleTemplate: "%s - Signup",
 });

@@ -63,7 +63,7 @@
               </div>
 
               <!-- Form -->
-              <form @submit.prevent="useAuth.signIn">
+              <form @submit="logIn">
                 <div class="grid gap-y-4">
                   <!-- Form Group -->
                   <div>
@@ -74,7 +74,7 @@
                     >
                     <div class="relative">
                       <input
-                        v-model="useAuth.email"
+                        v-model="email"
                         type="email"
                         id="email"
                         name="email"
@@ -127,7 +127,7 @@
                     >
                     <div class="relative">
                       <input
-                        v-model="useAuth.password"
+                        v-model="password"
                         type="password"
                         id="password"
                         name="password"
@@ -178,7 +178,6 @@
                         name="remember-me"
                         type="checkbox"
                         class="shrink-0 mt-0.5 border-gray-200 rounded text-blue-600 pointer-events-none focus:ring-blue-500 dark:bg-gray-800 dark:border-gray-700 dark:checked:bg-blue-500 dark:checked:border-blue-500 dark:focus:ring-offset-gray-800"
-                        required
                       />
                     </div>
                     <div class="ms-3">
@@ -198,7 +197,7 @@
                     type="submit"
                     class="w-full py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-blue text-white hover:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
                   >
-                    Sign up
+                    Sign In
                   </button>
                 </div>
               </form>
@@ -212,8 +211,21 @@
 </template>
 
 <script setup>
-import { useAuthStore } from "../store/auth";
-const useAuth = useAuthStore();
+import { toast } from "vue3-toastify";
+const { loginUser } = useFirebaseAuth();
+const email = useState("emailSignin", () => "");
+const password = useState("passwordSignin", () => "");
+// function
+const logIn = async () => {
+  const user = await loginUser(email.value, password.value);
+  if (user) {
+    toast.error("User created successfull!!");
+  }
+  email.value = "";
+  password.value = "";
+  await navigateTo({ path: "/booking" });
+};
+
 useHead({
   titleTemplate: "%s - Signin",
 });
