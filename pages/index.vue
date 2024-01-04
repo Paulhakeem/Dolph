@@ -2,7 +2,7 @@
   <div>
     <div
       id="home"
-      class="bg-[url('../assets/images/RR.jpg')] bg-cover bg-no-repeat bg-center h-screen"
+      class="bg-[url('../assets/images/RR.jpg')] bg-cover bg-no-repeat bg-center h-screen bg-fixed"
     >
       <div
         id="home1"
@@ -13,15 +13,16 @@
         >
           Premium car rental
         </h1>
-        <button
-          class="bg-light-blue rounded-full p-3 w-44 mt-10 text-md font-medium text-heading"
-        >
-          Booking Now
-        </button>
+        <nuxt-link to="/booking">
+          <button
+            class="bg-light-blue rounded-full p-3 w-44 mt-10 text-md font-medium text-heading"
+          >
+            Booking Now
+          </button>
+        </nuxt-link>
       </div>
 
-
-<!-- form -->
+      <!-- form -->
       <form id="homeSection" class="px-3">
         <div class="bg-[#e6e9f1] w-full rounded-md h-auto mt-44">
           <div class="flex flex-wrap gap-2 py-4 justify-center">
