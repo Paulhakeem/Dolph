@@ -81,11 +81,10 @@
                 <input
                  v-model="useFirestore.dropOffAddress"
                   type="text"
-                  class="w-full ring-0 border-b-2 border-b-heading px-2 outline-none uppercase caret-blue"
+                  class="w-full ring-0 border-b-2 border-b-heading px-2 outline-none first-letter:uppercase caret-blue"
                 />
               </div>
             </div>
-            <nuxt-link to="signUp">
               <div
                 id="homeSectionButton"
                 class="bg-blue rounded-md w-44 h-20 cursor-pointer text-center"
@@ -106,7 +105,6 @@
 
                 <button class="text-white">Book Now</button>
               </div>
-            </nuxt-link>
           </div>
         </div>
       </form>
