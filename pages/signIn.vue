@@ -63,7 +63,7 @@
               </div>
 
               <!-- Form -->
-              <form @submit="logIn">
+              <form @submit.prevent="logIn">
                 <div class="grid gap-y-4">
                   <!-- Form Group -->
                   <div>
