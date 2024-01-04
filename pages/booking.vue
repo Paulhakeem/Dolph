@@ -12,7 +12,11 @@
           </p>
           <!-- form -->
           <form id="homeSection" class="px-3">
-            <div class="w-full rounded-md h-auto">
+            <div
+              v-for="book in useFirestore.bookings"
+              :key="book.id"
+              class="w-full rounded-md h-auto"
+            >
               <div class="flex flex-wrap gap-14 py-4 justify-center">
                 <div class="bg-white rounded-md w-72 h-20 justify-center">
                   <h3
@@ -21,7 +25,9 @@
                     Pick Up address
                   </h3>
                   <div class="pl-3">
-                    <p class="text-gray-500 font-medium">{{useFirestore.pickUpAddress}}</p>
+                    <p class="text-gray-500 font-medium">
+                      {{ book.pickUpAddress }}
+                    </p>
                   </div>
                 </div>
 
@@ -34,7 +40,9 @@
                     Pick Up date
                   </h3>
                   <div class="pl-3">
-                    <p class="text-gray-500 font-medium">{{useFirestore.pickUpDate}}</p>
+                    <p class="text-gray-500 font-medium">
+                      {{ book.pickUpDate }}
+                    </p>
                   </div>
                 </div>
 
@@ -45,7 +53,9 @@
                     Pick Off address
                   </h3>
                   <div class="pl-3">
-                    <p class="text-gray-500 font-medium">{{useFirestore.pickOffAddress}}</p>
+                    <p class="text-gray-500 font-medium">
+                      {{ book.pickOffAddress }}
+                    </p>
                   </div>
                 </div>
 
@@ -56,7 +66,9 @@
                     Drop Off address
                   </h3>
                   <div class="pl-3">
-                    <p class="text-gray-500 font-medium">{{useFirestore.dropOffAddress}}</p>
+                    <p class="text-gray-500 font-medium">
+                      {{ book.dropOffAddress }}
+                    </p>
                   </div>
                 </div>
 
@@ -120,7 +132,7 @@
 <script setup>
 const { user } = useFirebaseAuth();
 
-const useFirestore = useDbStore()
+const useFirestore = useDbStore();
 
 definePageMeta({
   middleware: ["auth"],

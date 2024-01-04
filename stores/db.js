@@ -40,7 +40,7 @@ export const useDbStore = defineStore("database", () => {
         querySnapshot.forEach((doc) => {
           const details = {
             id: doc.id,
-            pickUpAddress: doc.pickUpAddress,
+            pickUpAddress: doc.data().pickUpAddress,
             pickOffAddress: doc.data(). pickOffAddress,
             pickUpDate: doc.data().pickUpDate,
             dropOffAddress: doc.data().dropOffAddress,
