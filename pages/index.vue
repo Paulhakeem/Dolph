@@ -85,6 +85,7 @@
                 />
               </div>
             </div>
+            <nuxt-link to="signUp">
               <div
                 id="homeSectionButton"
                 class="bg-blue rounded-md w-44 h-20 cursor-pointer text-center"
@@ -105,6 +106,7 @@
 
                 <button class="text-white">Book Now</button>
               </div>
+            </nuxt-link>
           </div>
         </div>
       </form>
