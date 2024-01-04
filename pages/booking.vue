@@ -21,7 +21,7 @@
                     Pick Up address
                   </h3>
                   <div class="pl-3">
-                    <p class="text-gray-500 font-medium">Nyali Mombasa</p>
+                    <p class="text-gray-500 font-medium">{{useFirestore.pickUpAddress}}</p>
                   </div>
                 </div>
 
@@ -34,7 +34,7 @@
                     Pick Up date
                   </h3>
                   <div class="pl-3">
-                    <p class="text-gray-500 font-medium">10/11/2024</p>
+                    <p class="text-gray-500 font-medium">{{useFirestore.pickUpDate}}</p>
                   </div>
                 </div>
 
@@ -45,7 +45,7 @@
                     Pick Off address
                   </h3>
                   <div class="pl-3">
-                    <p class="text-gray-500 font-medium">Watamu, Malindi</p>
+                    <p class="text-gray-500 font-medium">{{useFirestore.pickOffAddress}}</p>
                   </div>
                 </div>
 
@@ -56,7 +56,7 @@
                     Drop Off address
                   </h3>
                   <div class="pl-3">
-                    <p class="text-gray-500 font-medium">Ukunda Diani</p>
+                    <p class="text-gray-500 font-medium">{{useFirestore.dropOffAddress}}</p>
                   </div>
                 </div>
 
@@ -119,6 +119,8 @@
 
 <script setup>
 const { user } = useFirebaseAuth();
+
+const useFirestore = useDbStore()
 
 definePageMeta({
   middleware: ["auth"],

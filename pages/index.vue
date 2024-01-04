@@ -23,7 +23,7 @@
       </div>
 
       <!-- form -->
-      <form id="homeSection" class="px-3">
+      <form @submit.prevent="useFirestore.AddBooking" id="homeSection" class="px-3">
         <div class="bg-[#e6e9f1] w-full rounded-md h-auto mt-44">
           <div class="flex flex-wrap gap-2 py-4 justify-center">
             <div class="bg-white rounded-md w-72 h-20 justify-center">
@@ -34,6 +34,7 @@
               </h3>
               <div class="px-2">
                 <input
+                v-model="useFirestore.pickUpAddress"
                   type="text"
                   class="w-full ring-0 border-b-2 border-b-heading px-2 outline-none first-letter:uppercase caret-blue"
                 />
@@ -48,6 +49,7 @@
               </h3>
               <div class="px-2">
                 <input
+                v-model="useFirestore.pickUpDate"
                   type="text"
                   class="w-full ring-0 border-b-2 border-b-heading px-2 outline-none first-letter:uppercase caret-blue"
                 />
@@ -62,6 +64,7 @@
               </h3>
               <div class="px-2">
                 <input
+                 v-model="useFirestore.pickOffAddress"
                   type="text"
                   class="w-full ring-0 border-b-2 border-b-heading px-2 outline-none first-letter:uppercase caret-blue"
                 />
@@ -76,12 +79,12 @@
               </h3>
               <div class="px-2">
                 <input
+                 v-model="useFirestore.dropOffAddress"
                   type="text"
                   class="w-full ring-0 border-b-2 border-b-heading px-2 outline-none uppercase caret-blue"
                 />
               </div>
             </div>
-            <nuxt-link to="signUp">
               <div
                 id="homeSectionButton"
                 class="bg-blue rounded-md w-44 h-20 cursor-pointer text-center"
@@ -102,7 +105,6 @@
 
                 <button class="text-white">Book Now</button>
               </div>
-            </nuxt-link>
           </div>
         </div>
       </form>
@@ -117,6 +119,8 @@
 </template>
 
 <script setup>
+
+const useFirestore = useDbStore()
 useHead({
   titleTemplate: "%s - Home",
 });

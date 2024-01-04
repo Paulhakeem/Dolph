@@ -110,6 +110,9 @@
                         aria-describedby="password-error"
                         required
                       />
+                        <p class="text-red-500 font-semibold text-sm pt-2">
+                        {{ errorMessage }}
+                      </p>
                     </div>
                   </div>
                   <!-- End Form Group -->
@@ -154,8 +157,12 @@ import { toast } from "vue3-toastify";
 const { createUser } = useFirebaseAuth();
 const email = useState("emailSignin", () => "");
 const password = useState("passwordSignin", () => "");
+const errorMessage = useState("errorMessage", () => "");
 // function
 const registerUser = async () => {
+   if (password.value.length < 6) {
+    return (errorMessage.value = "Characters should be above 6 or more");
+  }
   const user = await createUser(email.value, password.value);
   if (user) {
     toast.error("User created successfull!!");
