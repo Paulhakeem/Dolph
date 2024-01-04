@@ -2,7 +2,7 @@
   <div>
     <div
       id="home"
-      class="bg-[url('../assets/images/home.jpg')] bg-cover bg-no-repeat bg-center h-screen"
+      class="bg-[url('../assets/images/RR.jpg')] bg-cover bg-no-repeat bg-center h-screen"
     >
       <div
         id="home1"

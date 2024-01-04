@@ -1,6 +1,8 @@
 <template>
-    <div class="bg-[url('../assets/images/home.jpg')] bg-cover bg-no-repeat bg-center h-screen">
-    Welcome to our Bookings
+    <div class="bg-[url('../assets/images/ferarri.jpg')] bg-cover bg-no-repeat bg-center h-screen">
+    <div class="px-6 bg-light opacity-50 h-96 justify-center">
+     
+    </div>
     </div>
 </template>
 
