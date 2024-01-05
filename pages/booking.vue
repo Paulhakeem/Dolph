@@ -11,7 +11,7 @@
             voluptas?
           </p>
           <!-- form -->
-          <form @submit.prevent="useFirestore.confirmBook" id="homeSection" class="px-3">
+          <form id="homeSection" class="px-3">
             <div class="w-full rounded-md h-auto">
               <div
                 v-for="book in useFirestore.bookings"
@@ -80,7 +80,6 @@
                   </h3>
                   <div class="px-2">
                     <input
-                     v-model="useFirestore.yourBudget"
                       type="text"
                       class="w-full ring-0 border-b-2 text-gray-500 border-b-heading px-2 outline-none first-letter:uppercase caret-blue"
                     />
@@ -95,7 +94,6 @@
                   </h3>
                   <div class="px-2">
                     <input
-                    v-model="useFirestore.favCar"
                       type="text"
                       class="w-full ring-0 border-b-2 text-gray-500 border-b-heading px-2 outline-none first-letter:uppercase caret-blue"
                     />

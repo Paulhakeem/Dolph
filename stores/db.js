@@ -4,17 +4,18 @@ import {
   onSnapshot,
 } from "firebase/firestore";
 import { toast } from "vue3-toastify";
+
 export const useDbStore = defineStore("database", () => {
   const { $firestore } = useNuxtApp()
-  const pickUpAddress = ref('');
-  const pickUpDate = ref('');
-  const pickOffAddress = ref('');
-  const dropOffAddress = ref('');
+  const pickUpAddress = ref(null);
+  const pickUpDate = ref(null);
+  const pickOffAddress = ref(null);
+  const dropOffAddress = ref(null);
 
-  const yourBudget = ref('')
-  const favCar = ref('')
+  const yourBudget = ref(null)
+  const favCar = ref(null)
  
-  const confirmBooking = ref([{}])
+  const confirmBooking = ref([])
   // functions
 
   const AddBooking = () => {
@@ -54,8 +55,6 @@ export const useDbStore = defineStore("database", () => {
             pickOffAddress: doc.data(). pickOffAddress,
             pickUpDate: doc.data().pickUpDate,
             dropOffAddress: doc.data().dropOffAddress,
-            yourBubget: doc.data().yourBubget,
-            favCar: doc.data().favCar
           };
           carBooking.push(details);
         });
