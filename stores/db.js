@@ -2,18 +2,19 @@ import {
   collection,
   addDoc,
   onSnapshot,
-  doc,
-  where,
-  query,
 } from "firebase/firestore";
 import { toast } from "vue3-toastify";
 export const useDbStore = defineStore("database", () => {
-  const pickUpAddress = useState("pickUpAddress", () => "");
-  const pickUpDate = useState("pickUpDate", () => "");
-  const pickOffAddress = useState("pickOffAddress", () => "");
-  const dropOffAddress = useState("dropOffAddress", () => "");
   const { $firestore } = useNuxtApp()
-  const bookings = useState('booking', () => [])
+  const pickUpAddress = ref('');
+  const pickUpDate = ref('');
+  const pickOffAddress = ref('');
+  const dropOffAddress = ref('');
+
+  const yourBudget = ref('')
+  const favCar = ref('')
+ 
+  const confirmBooking = ref([{}])
   // functions
 
   const AddBooking = () => {
@@ -31,6 +32,15 @@ export const useDbStore = defineStore("database", () => {
     return navigateTo('/booking')
   };
 
+  // confirm bookings
+  const confirmBook = () => {
+    addDoc(collection($firestore, 'confirmBooking'), {
+      yourBudget: yourBudget.value,
+      favCar: favCar.value
+    })
+    toast.success("Booking confirmed!!");
+  }
+
   // get data from database
 
   onMounted(() => {
@@ -44,10 +54,12 @@ export const useDbStore = defineStore("database", () => {
             pickOffAddress: doc.data(). pickOffAddress,
             pickUpDate: doc.data().pickUpDate,
             dropOffAddress: doc.data().dropOffAddress,
+            yourBubget: doc.data().yourBubget,
+            favCar: doc.data().favCar
           };
           carBooking.push(details);
         });
-        bookings.value = carBooking;
+        confirmBooking.value = carBooking;
       });
     } catch (err) {
       toast.success("something went wrong!!");
@@ -60,7 +72,10 @@ export const useDbStore = defineStore("database", () => {
     pickOffAddress,
     dropOffAddress,
     AddBooking,
-    bookings
+    yourBudget,
+    favCar,
+    confirmBooking,
+    confirmBook
   };
 });
 if (import.meta.hot) {

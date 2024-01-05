@@ -206,6 +206,7 @@
 </template>
 
 <script setup>
+
 import { toast } from "vue3-toastify";
 const { loginUser } = useFirebaseAuth();
 const email = useState("emailSignin", () => "");

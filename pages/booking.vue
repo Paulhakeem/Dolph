@@ -11,13 +11,13 @@
             voluptas?
           </p>
           <!-- form -->
-          <form id="homeSection" class="px-3">
-            <div
-              v-for="book in useFirestore.bookings"
-              :key="book.id"
-              class="w-full rounded-md h-auto"
-            >
-              <div class="flex flex-wrap gap-14 py-4 justify-center">
+          <form @submit.prevent="useFirestore.confirmBook" id="homeSection" class="px-3">
+            <div class="w-full rounded-md h-auto">
+              <div
+                v-for="book in useFirestore.bookings"
+                :key="book.id"
+                class="flex flex-wrap gap-14 py-4 justify-center"
+              >
                 <div class="bg-white rounded-md w-72 h-20 justify-center">
                   <h3
                     class="text-heading pl-4 pt-3 font-semibold text-center rounded-md"
@@ -80,8 +80,9 @@
                   </h3>
                   <div class="px-2">
                     <input
+                     v-model="useFirestore.yourBudget"
                       type="text"
-                      class="w-full ring-0 border-b-2 border-b-heading px-2 outline-none first-letter:uppercase caret-blue"
+                      class="w-full ring-0 border-b-2 text-gray-500 border-b-heading px-2 outline-none first-letter:uppercase caret-blue"
                     />
                   </div>
                 </div>
@@ -94,13 +95,14 @@
                   </h3>
                   <div class="px-2">
                     <input
+                    v-model="useFirestore.favCar"
                       type="text"
-                      class="w-full ring-0 border-b-2 border-b-heading px-2 outline-none first-letter:uppercase caret-blue"
+                      class="w-full ring-0 border-b-2 text-gray-500 border-b-heading px-2 outline-none first-letter:uppercase caret-blue"
                     />
                   </div>
                 </div>
 
-                <div
+                <button
                   id="homeSectionButton"
                   class="bg-blue rounded-md w-44 h-20 cursor-pointer text-center"
                 >
@@ -118,8 +120,8 @@
                     </svg>
                   </div>
 
-                  <button class="text-white">Confirm Booking</button>
-                </div>
+                  <p class="text-white">Confirm Booking</p>
+                </button>
               </div>
             </div>
           </form>
