@@ -16,8 +16,6 @@ export const useDbStore = defineStore("database", () => {
   const favCar = ref(null)
  
   const confirmBooking = ref([])
-
-  console.log(confirmBooking);
   // functions
 
   const AddBooking = () => {

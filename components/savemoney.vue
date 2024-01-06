@@ -51,11 +51,13 @@
             Reprehenderit, itaque?
           </p>
 
+         <nuxt-link to="/booking">
           <button
             class="bg-light-blue rounded-md p-2 w-42 mt-10 text-md font-medium text-heading text-sm"
           >
             Booking Now
           </button>
+         </nuxt-link>
         </div>
       </div>
     </div>

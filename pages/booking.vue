@@ -27,7 +27,7 @@
             >
               <div
                 id="bookingBox"
-                class="flex flex-wrap gap-14 py-4 justify-center"
+                class="flex flex-wrap gap-14 py-4 justify-center w-2/3 m-auto"
               >
                 <div
                   id="bookingFlex"
@@ -89,6 +89,7 @@
                   </h3>
                   <div class="px-2">
                     <input
+                      v-model="useFirestore.yourBudget"
                       type="text"
                       class="w-full ring-0 border-b-2 text-gray-500 border-b-heading px-2 outline-none first-letter:uppercase caret-blue"
                       required
@@ -102,6 +103,7 @@
                   </h3>
                   <div class="px-2">
                     <input
+                      v-model="useFirestore.favCar"
                       type="text"
                       class="w-full ring-0 border-b-2 text-gray-500 border-b-heading px-2 outline-none first-letter:uppercase caret-blue"
                       required

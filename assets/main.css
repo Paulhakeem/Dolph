@@ -67,6 +67,15 @@ body {
 #bookingButton p {
     margin-top: 2px;
 }
+#bookingInfor {
+    flex-wrap: wrap;
+}
+#bookingRow {
+    padding-top: 14px;
+}
+#bookingHeading {
+    margin-bottom: 10px;
+}
   #footer {
     max-width: 100%;
     margin-top: 3em;
@@ -107,7 +116,11 @@ body {
     text-align: center;
   
 } 
-
+#bookingBox {
+    gap: 14px;
+    text-align: center;
+    justify-content: center;
+}
 #carsButton {
     padding-top: 2px;
 }
@@ -138,6 +151,14 @@ body {
    #home h1{
     font-size: 4em;
  }
+ #bookingInfor {
+    flex-wrap: wrap;
+}
+#bookingInput {
+    text-align: center;
+    justify-content: center;
+    width: 90%;
+}
   } 
 
 

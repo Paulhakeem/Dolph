@@ -83,11 +83,13 @@
 
           <div class="flex justify-between mx-3 py-3">
             <p class="text-brown text-md font-bold">$200/day</p>
+           <nuxt-link to="/booking">
             <button
               class="bg-brown p-2 w-24 rounded-full text-light text-center justify-center"
             >
               Book Now
             </button>
+           </nuxt-link>
           </div>
         </div>
 
@@ -155,11 +157,13 @@
 
           <div class="flex justify-between mx-3 py-3">
             <p class="text-brown text-md font-bold">$150/day</p>
+           <nuxt-link to="/booking">
             <button
               class="bg-brown p-2 w-24 rounded-full text-light text-center justify-center"
             >
               Book Now
             </button>
+           </nuxt-link>
           </div>
         </div>
 
@@ -227,11 +231,13 @@
 
           <div class="flex justify-between mx-3 py-3">
             <p class="text-brown text-md font-bold">$180/day</p>
+           <nuxt-link to="/booking">
             <button
               class="bg-brown p-2 w-24 rounded-full text-light text-center justify-center"
             >
               Book Now
             </button>
+           </nuxt-link>
           </div>
         </div>
       </div>
