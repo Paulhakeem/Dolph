@@ -20,18 +20,16 @@ body {
     #us {
         padding-top: 14em;
     }
-    #money h4, p{
-        padding-top: 3em;
-        text-align: center;
-    }
+   
     #moneybutton {
         text-align: center;
     }
-   #imageposition {
-    padding-top: 4em;
-   }
+    #saveMoney {
+        text-align: center;
+    }
    #button {
     gap: 10px;
+    max-width: 24rem;
    }
    #button1 p {
     padding-top: 1px;
