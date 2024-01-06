@@ -14,8 +14,8 @@
           Premium car rental
         </h1>
         <nuxt-link to="/booking">
-          <button
-            class="bg-light-blue rounded-full p-3 w-44 mt-10 text-md font-medium text-heading"
+          <button id="homeButton"
+            class="bg-light-blue rounded-full p-3 w-44 mt-10 text-md font-medium text-heading lg:mt-20"
           >
             Booking Now
           </button>
