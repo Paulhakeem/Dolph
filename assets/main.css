@@ -51,8 +51,23 @@ body {
     height: 40%;
     margin-top: 3em;
   }
-
-  
+#bookingSection {
+    margin-left: 2px;
+    margin-right: 2px;
+}
+#bookingBox {
+    gap: 14px;
+}
+#bookingFlex {
+    height: 50%;
+}
+#bookingFlex p {
+    padding-top: 10px;
+    padding-bottom: 4px;
+}
+#bookingButton p {
+    margin-top: 2px;
+}
   #footer {
     max-width: 100%;
     margin-top: 3em;
