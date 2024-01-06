@@ -1,14 +1,12 @@
 import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
-  GoogleAuthProvider,
   signInWithPopup,
 } from "firebase/auth";
 import { toast } from "vue3-toastify";
 
 export default function () {
   const { $auth } = useNuxtApp();
-  const provider = new GoogleAuthProvider();
   const user = useState("firebaseUser", () => null);
 
   const createUser = async (email, password) => {
@@ -61,6 +59,5 @@ export default function () {
     createUser,
     loginUser,
     googleLogin,
-    provider,
   };
 }

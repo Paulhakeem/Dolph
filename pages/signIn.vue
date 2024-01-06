@@ -26,6 +26,7 @@
 
             <div class="mt-5">
               <button
+              @click="google"
                 type="button"
                 class="w-full py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-white dark:hover:bg-gray-800 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
               >
@@ -82,15 +83,6 @@
                         aria-describedby="email-error"
                         required
                       />
-                      <!-- <div
-                        class="input-errors"
-                        v-for="error of v$.email.$errors"
-                        :key="error.$uid"
-                      >
-                        <p class="error-msg text-red-500 italic">
-                          {{ error.$message }}
-                        </p>
-                      </div> -->
                       <div
                         class="hidden absolute inset-y-0 end-0 flex items-center pointer-events-none pe-3"
                       >
@@ -206,9 +198,9 @@
 </template>
 
 <script setup>
-
 import { toast } from "vue3-toastify";
-const { loginUser } = useFirebaseAuth();
+import { GoogleAuthProvider } from "firebase/auth";
+const { loginUser, googleLogin } = useFirebaseAuth();
 const email = useState("emailSignin", () => "");
 const password = useState("passwordSignin", () => "");
 const errorMessage = useState("errorMessage", () => "");
@@ -225,7 +217,15 @@ const logIn = async () => {
   password.value = "";
   await navigateTo({ path: "/booking" });
 };
-
+// google
+const provider = new GoogleAuthProvider();
+const google = async () => {
+  const user = await googleLogin(provider);
+  if (user) {
+    toast.error("User created successfull!!");
+  }
+  await navigateTo({ path: "/booking" });
+};
 useHead({
   titleTemplate: "%s - Signin",
 });

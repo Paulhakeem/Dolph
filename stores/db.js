@@ -16,6 +16,8 @@ export const useDbStore = defineStore("database", () => {
   const favCar = ref(null)
  
   const confirmBooking = ref([])
+
+  console.log(confirmBooking);
   // functions
 
   const AddBooking = () => {
@@ -41,30 +43,28 @@ export const useDbStore = defineStore("database", () => {
     })
     toast.success("Booking confirmed!!");
   }
-
-  // get data from database
-
-  // onMounted(() => {
-  //   try {
-  //     onSnapshot(collection($firestore, "Bookings"), (querySnapshot) => {
-  //       const carBooking = [];
-  //       querySnapshot.forEach((doc) => {
-  //         const details = {
-  //           id: doc.id,
-  //           pickUpAddress: doc.data().pickUpAddress,
-  //           pickOffAddress: doc.data(). pickOffAddress,
-  //           pickUpDate: doc.data().pickUpDate,
-  //           dropOffAddress: doc.data().dropOffAddress,
-  //         };
-  //         carBooking.push(details);
-  //       });
-  //       confirmBooking.value = carBooking;
-  //     });
-  //   } catch (err) {
-  //     toast.success("something went wrong!!");
-  //   }
-  // })
-
+  onMounted(() => {
+    try {
+     onSnapshot(collection($firestore, "Bookings"), (querySnapshot) => {
+       const carBooking = [];
+       querySnapshot.forEach((doc) => {
+         const details = {
+           id: doc.id,
+           pickUpAddress: doc.data().pickUpAddress,
+           pickOffAddress: doc.data(). pickOffAddress,
+           pickUpDate: doc.data().pickUpDate,
+           dropOffAddress: doc.data().dropOffAddress,
+           yourBudget: doc.data().yourBudget,
+           favCar: doc.data().favCar
+         };
+         carBooking.push(details);
+       });
+      confirmBooking.value = carBooking;
+     });
+   } catch (err) {
+     toast.success("something went wrong!!");
+   }
+     })
   return {
     pickUpAddress,
     pickUpDate,
@@ -80,3 +80,5 @@ export const useDbStore = defineStore("database", () => {
 if (import.meta.hot) {
   import.meta.hot.accept(acceptHMRUpdate(useDbStore, import.meta.hot));
 }
+
+

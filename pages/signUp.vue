@@ -154,6 +154,7 @@
 
 <script setup>
 import { toast } from "vue3-toastify";
+import { GoogleAuthProvider } from "firebase/auth";
 const { createUser } = useFirebaseAuth();
 const email = useState("emailSignin", () => "");
 const password = useState("passwordSignin", () => "");
@@ -171,6 +172,20 @@ const registerUser = async () => {
   password.value = "";
   await navigateTo({ path: "/booking" });
 };
+// google
+const provider = new GoogleAuthProvider();
+ const googleLogin = async (provider) => {
+    try {
+      const userCredentials = signInWithPopup($auth, provider);
+      if (userCredentials) {
+        user.value = userCredentials.user;
+        useNuxtApp().$toast.success("Welcome back!");
+      }
+    } catch (error) {
+      useNuxtApp().$toast.error("An error occurs!!");
+    }
+  };
+
 useHead({
   titleTemplate: "%s - Signup",
 });

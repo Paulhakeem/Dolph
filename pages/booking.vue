@@ -4,6 +4,7 @@
   >
     <div class="justify-center items-center pt-16 pb-12">
       <section
+        v-if="user === userId"
         id="bookingSection"
         class="bg-[#e6e9f1] p-6 rounded-md mx-w-md mx-16 opacity-90"
       >
@@ -14,8 +15,16 @@
             voluptas?
           </p>
           <!-- form -->
-          <form id="bookingSection" class="">
-            <div class="w-full rounded-md h-auto">
+          <form
+            @submit.prevent="useFirestore.confirmBook"
+            id="bookingSection"
+            class=""
+          >
+            <div
+              v-for="booking in useFirestore.confirmBooking"
+              :key="booking.id"
+              class="w-full rounded-md h-auto"
+            >
               <div
                 id="bookingBox"
                 class="flex flex-wrap gap-14 py-4 justify-center"
@@ -28,8 +37,7 @@
                     Pick Up address
                   </h3>
                   <p class="text-gray-500 font-medium">
-                    <!-- {{ book.pickUpAddress }} -->
-                    Msa
+                    {{ booking.pickUpAddress }}
                   </p>
                 </div>
 
@@ -42,8 +50,7 @@
                   </h3>
                   <div class="pl-3">
                     <p class="text-gray-500 font-medium">
-                      <!-- {{ book.pickUpDate }} -->
-                      22/3/2024
+                      {{ booking.pickUpDate }}
                     </p>
                   </div>
                 </div>
@@ -57,8 +64,7 @@
                   </h3>
                   <div class="pl-3">
                     <p class="text-gray-500 font-medium">
-                      <!-- {{ book.pickOffAddress }} -->
-                      Voi
+                      {{ booking.pickOffAddress }}
                     </p>
                   </div>
                 </div>
@@ -72,8 +78,7 @@
                   </h3>
                   <div class="pl-3">
                     <p class="text-gray-500 font-medium">
-                      <!-- {{ book.dropOffAddress }} -->
-                      Nai
+                      {{ booking.dropOffAddress }}
                     </p>
                   </div>
                 </div>
@@ -86,6 +91,7 @@
                     <input
                       type="text"
                       class="w-full ring-0 border-b-2 text-gray-500 border-b-heading px-2 outline-none first-letter:uppercase caret-blue"
+                      required
                     />
                   </div>
                 </div>
@@ -98,6 +104,7 @@
                     <input
                       type="text"
                       class="w-full ring-0 border-b-2 text-gray-500 border-b-heading px-2 outline-none first-letter:uppercase caret-blue"
+                      required
                     />
                   </div>
                 </div>
@@ -118,13 +125,13 @@
 </template>
 
 <script setup>
-// const { user } = useFirebaseAuth();
+const { user } = useFirebaseAuth();
 
 const useFirestore = useDbStore();
 
-// definePageMeta({
-//   middleware: ["auth"],
-// });
+definePageMeta({
+  middleware: ["auth"],
+});
 useHead({
   titleTemplate: "%s - car booking",
 });
