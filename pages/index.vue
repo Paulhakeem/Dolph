@@ -6,7 +6,7 @@
     >
       <div
         id="home1"
-        class="text-center pt-28 text-balance select-none sm:py-32 mb-14 xl:pt-16"
+        class="text-center pt-28 text-balance select-none mb-14 xl:pt-16"
       >
         <h1
           class="text-7xl font-black text-light stroke-white stroke-2 sm:text-6xl md:2xl xl:text-6xl"
@@ -23,7 +23,7 @@
       </div>
 
       <!-- form -->
-      <form @submit.prevent="useFirestore.AddBooking" id="homeSection" class="px-3 lg:mt-46 lg:px-0">
+      <form @submit.prevent="useFirestore.AddBooking" id="homeSection" class="px-3 tablet:mt-48 lg:mt-46 lg:px-0">
         <div class="bg-[#e6e9f1] w-full rounded-md h-auto mt-44 lg">
           <div class="flex flex-wrap gap-2 py-4 justify-center">
             <div class="bg-white rounded-md w-72 h-20 justify-center">
