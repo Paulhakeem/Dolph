@@ -12,7 +12,7 @@
             class="w-96"
           />
           </div>
-          <div id="button" class="flex text-center justify-center gap-4 px-2 justify-items-center">
+          <div id="button" class="flex text-center justify-center gap-4 px-2 justify-items-center m-auto">
             <button
               class="flex justify-center gap-4 border border-1 border-light p-3 rounded-md w-52"
             >
@@ -51,7 +51,7 @@
             Reprehenderit, itaque?
           </p>
 
-         <nuxt-link to="/booking">
+         <nuxt-link to="/bookingInfo">
           <button
             class="bg-light-blue rounded-md p-2 w-42 mt-10 text-md font-medium text-heading text-sm"
           >

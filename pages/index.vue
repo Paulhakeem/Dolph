@@ -13,7 +13,7 @@
         >
           Premium car rental
         </h1>
-        <nuxt-link to="/booking">
+        <nuxt-link to="/bookingInfo">
           <button
             id="homeButton"
             class="bg-light-blue rounded-full p-3 w-44 mt-10 text-md font-medium text-heading tablet:mt-14"

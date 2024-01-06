@@ -157,7 +157,7 @@
 
           <div class="flex justify-between mx-3 py-3">
             <p class="text-brown text-md font-bold">$150/day</p>
-           <nuxt-link to="/booking">
+           <nuxt-link to="/bookingInfo">
             <button
               class="bg-brown p-2 w-24 rounded-full text-light text-center justify-center"
             >

@@ -7,11 +7,13 @@
         Get a winter discount <br />
         for all Ferrari
       </h4>
+     <nuxt-link to="/bookingInfo">
       <button
         class="bg-light p-1.5 w-32 rounded-full text-brown text-center justify-center mt-8"
       >
         Book Now
       </button>
+     </nuxt-link>
     </div>
   </div>
 </template>
