@@ -50,6 +50,7 @@ export default function () {
         user.value = userCredentials.user;
         useNuxtApp().$toast.success("Welcome back!");
       }
+      
     } catch (error) {
       useNuxtApp().$toast.error("An error occurs!!");
     }

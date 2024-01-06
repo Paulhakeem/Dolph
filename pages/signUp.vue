@@ -26,7 +26,7 @@
 
             <div class="mt-5">
               <button
-              @click="google"
+                @click="google"
                 type="button"
                 class="w-full py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-white dark:hover:bg-gray-800 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
               >
@@ -111,7 +111,7 @@
                         aria-describedby="password-error"
                         required
                       />
-                        <p class="text-red-500 font-semibold text-sm pt-2">
+                      <p class="text-red-500 font-semibold text-sm pt-2">
                         {{ errorMessage }}
                       </p>
                     </div>
@@ -156,13 +156,13 @@
 <script setup>
 import { toast } from "vue3-toastify";
 import { GoogleAuthProvider } from "firebase/auth";
-const { createUser } = useFirebaseAuth();
+const { createUser, googleLogin } = useFirebaseAuth();
 const email = useState("emailSignin", () => "");
 const password = useState("passwordSignin", () => "");
 const errorMessage = useState("errorMessage", () => "");
 // function
 const registerUser = async () => {
-   if (password.value.length < 6) {
+  if (password.value.length < 6) {
     return (errorMessage.value = "Characters should be above 6 or more");
   }
   const user = await createUser(email.value, password.value);
@@ -175,18 +175,14 @@ const registerUser = async () => {
 };
 // google
 const provider = new GoogleAuthProvider();
- const googleLogin = async (provider) => {
-    try {
-      const userCredentials = signInWithPopup($auth, provider);
-      if (userCredentials) {
-        user.value = userCredentials.user;
-        useNuxtApp().$toast.success("Welcome back!");
-      }
-       await navigateTo({ path: "/booking" });
-    } catch (error) {
-      useNuxtApp().$toast.error("An error occurs!!");
-    }
-  };
+
+const google = async () => {
+  const user = await googleLogin(provider);
+  if (user) {
+    toast.error("User created successfull!!");
+  }
+  await navigateTo({ path: "/booking" });
+};
 
 useHead({
   titleTemplate: "%s - Signup",
