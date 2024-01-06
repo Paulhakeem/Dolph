@@ -2,7 +2,7 @@
   <main>
     <div class="bg-bg w-full h-auto mx-auto">
       <div
-        class="grid grid-cols-1 md:grid-cols-2 pb-12 items-center justify-center gap-5"
+        class="flex flex-wrap pb-12 items-center justify-center"
       >
         <div class="justify-center justify-self-center mx-auto">
           <div class="flex justify-center object-center">
