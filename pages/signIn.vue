@@ -224,6 +224,7 @@ const google = async () => {
   if (user) {
     toast.error("User created successfull!!");
   }
+  toast.success("Welcome back!");
   await navigateTo({ path: "/booking" });
 };
 useHead({

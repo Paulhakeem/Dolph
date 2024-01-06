@@ -48,7 +48,6 @@ export default function () {
       const userCredentials = signInWithPopup($auth, provider);
       if (userCredentials) {
         user.value = userCredentials.user;
-        useNuxtApp().$toast.success("Welcome back!");
       }
       
     } catch (error) {

@@ -181,6 +181,7 @@ const google = async () => {
   if (user) {
     toast.error("User created successfull!!");
   }
+  toast.error("User created successfull!!");
   await navigateTo({ path: "/booking" });
 };
 
