@@ -6,16 +6,16 @@
     >
       <div
         id="home1"
-        class="text-center pt-28 text-balance select-none mb-14 xl:pt-16"
+        class="text-center pt-28 text-balance select-none sm:py-32 mb-14 xl:pt-16"
       >
         <h1
-          class="text-7xl font-black text-light stroke-white stroke-2 sm:text-3xl md:2xl xl:text-6xl"
+          class="text-7xl font-black text-light stroke-white stroke-2 sm:text-6xl md:2xl xl:text-6xl"
         >
           Premium car rental
         </h1>
         <nuxt-link to="/booking">
           <button id="homeButton"
-            class="bg-light-blue rounded-full p-3 w-44 mt-10 text-md font-medium text-heading lg:mt-20"
+            class="bg-light-blue rounded-full p-3 w-44 mt-10 text-md font-medium text-heading tablet:mt-14"
           >
             Booking Now
           </button>
