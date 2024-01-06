@@ -13,11 +13,7 @@
           <!-- form -->
           <form id="homeSection" class="px-3">
             <div class="w-full rounded-md h-auto">
-              <div
-                v-for="book in useFirestore.bookings"
-                :key="book.id"
-                class="flex flex-wrap gap-14 py-4 justify-center"
-              >
+              <div class="flex flex-wrap gap-14 py-4 justify-center">
                 <div class="bg-white rounded-md w-72 h-20 justify-center">
                   <h3
                     class="text-heading pl-4 pt-3 font-semibold text-center rounded-md"
@@ -26,7 +22,8 @@
                   </h3>
                   <div class="pl-3">
                     <p class="text-gray-500 font-medium">
-                      {{ book.pickUpAddress }}
+                      <!-- {{ book.pickUpAddress }} -->
+                      Msa
                     </p>
                   </div>
                 </div>
@@ -41,7 +38,8 @@
                   </h3>
                   <div class="pl-3">
                     <p class="text-gray-500 font-medium">
-                      {{ book.pickUpDate }}
+                      <!-- {{ book.pickUpDate }} -->
+                      22/3/2024
                     </p>
                   </div>
                 </div>
@@ -54,7 +52,8 @@
                   </h3>
                   <div class="pl-3">
                     <p class="text-gray-500 font-medium">
-                      {{ book.pickOffAddress }}
+                      <!-- {{ book.pickOffAddress }} -->
+                      Voi
                     </p>
                   </div>
                 </div>
@@ -67,7 +66,8 @@
                   </h3>
                   <div class="pl-3">
                     <p class="text-gray-500 font-medium">
-                      {{ book.dropOffAddress }}
+                      <!-- {{ book.dropOffAddress }} -->
+                      Nai
                     </p>
                   </div>
                 </div>

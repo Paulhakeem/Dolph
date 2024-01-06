@@ -44,26 +44,26 @@ export const useDbStore = defineStore("database", () => {
 
   // get data from database
 
-  onMounted(() => {
-    try {
-      onSnapshot(collection($firestore, "Bookings"), (querySnapshot) => {
-        const carBooking = [];
-        querySnapshot.forEach((doc) => {
-          const details = {
-            id: doc.id,
-            pickUpAddress: doc.data().pickUpAddress,
-            pickOffAddress: doc.data(). pickOffAddress,
-            pickUpDate: doc.data().pickUpDate,
-            dropOffAddress: doc.data().dropOffAddress,
-          };
-          carBooking.push(details);
-        });
-        confirmBooking.value = carBooking;
-      });
-    } catch (err) {
-      toast.success("something went wrong!!");
-    }
-  })
+  // onMounted(() => {
+  //   try {
+  //     onSnapshot(collection($firestore, "Bookings"), (querySnapshot) => {
+  //       const carBooking = [];
+  //       querySnapshot.forEach((doc) => {
+  //         const details = {
+  //           id: doc.id,
+  //           pickUpAddress: doc.data().pickUpAddress,
+  //           pickOffAddress: doc.data(). pickOffAddress,
+  //           pickUpDate: doc.data().pickUpDate,
+  //           dropOffAddress: doc.data().dropOffAddress,
+  //         };
+  //         carBooking.push(details);
+  //       });
+  //       confirmBooking.value = carBooking;
+  //     });
+  //   } catch (err) {
+  //     toast.success("something went wrong!!");
+  //   }
+  // })
 
   return {
     pickUpAddress,

@@ -30,7 +30,7 @@
               >
                 <span class="flex">
                   <svg
-                    class="flex-shrink-0 mt-2 h-6 w-6 md:w-7 md:h-7 hs-tab-active:text-blue-600 text-gray-800 dark:hs-tab-active:text-blue-500 dark:text-gray-200"
+                    class="flex-shrink-0 mt-2 h-6 w-6 md:w-7 md:h-7 hs-tab-active:text-blue-600 text-gray-800 dark:hs-tab-active:text-blue-500"
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
                     height="24"
@@ -55,11 +55,11 @@
                   </svg>
                   <span class="grow ms-6">
                     <span
-                      class="block text-lg font-semibold hs-tab-active:text-blue text-gray-800 dark:hs-tab-active:text-blue-500 dark:text-gray-200"
+                      class="block text-lg font-semibold hs-tab-active:text-blue text-gray-800 dark:hs-tab-active:text-blue-500"
                       >No delays</span
                     >
                     <span
-                      class="block mt-1 text-gray-800 dark:hs-tab-active:text-gray-200 dark:text-gray-200"
+                      class="block mt-1 text-gray-800 dark:hs-tab-active:text-gray-200"
                       >Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestias, iusto!.</span
                     >
                   </span>

@@ -77,7 +77,8 @@ body {
     }
 
     /* #homeSection {
-        padding-top: 5em;
+        margin-top: 14em;
+        margin-bottom: 14em;
     }  */
 /* money section */
     #imageposition {
@@ -124,6 +125,9 @@ body {
     width: 40%;
     font-size: 1.4em;
    }
+   #home h1{
+    font-size: 4em;
+ }
   } 
 
 
