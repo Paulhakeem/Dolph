@@ -9,7 +9,7 @@
         >
           <div class="mb-10 lg:mb-0 lg:col-span-6 lg:col-start-8 lg:order-2">
             <h2
-              class="text-2xl text-heading font-bold sm:text-3xl dark:text-gray-200"
+              class="text-2xl text-heading font-bold sm:text-3xl"
             >
               Why choose us
             </h2>
@@ -59,7 +59,7 @@
                       >No delays</span
                     >
                     <span
-                      class="block mt-1 text-gray-800 dark:hs-tab-active:text-gray-200"
+                      class="block mt-1 text-gray-700 dark:hs-tab-active:text-gray-200"
                       >Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestias, iusto!.</span
                     >
                   </span>
@@ -96,7 +96,7 @@
                       >High quality</span
                     >
                     <span
-                      class="block mt-1 text-gray-800 dark:hs-tab-active:text-gray-200 dark:text-gray-200"
+                      class="block mt-1 text-gray-700 dark:hs-tab-active:text-gray-200"
                       >Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae, enim..</span
                     >
                   </span>
@@ -113,7 +113,7 @@
               >
                 <span class="flex">
                   <svg
-                    class="flex-shrink-0 mt-2 h-6 w-6 md:w-7 md:h-7 hs-tab-active:text-blue text-gray-800 dark:hs-tab-active:text-blue-500"
+                    class="flex-shrink-0 mt-2 h-6 w-6 md:w-7 md:h-7 hs-tab-active:text-blue text-gray-800 dark:hs-tab-active:text-blue"
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
                     height="24"
@@ -134,11 +134,11 @@
                   </svg>
                   <span class="grow ms-6">
                     <span
-                      class="block text-lg font-semibold hs-tab-active:text-blue text-gray-800 dark:hs-tab-active:text-blue-500 dark:text-gray-200"
+                      class="block text-lg font-semibold hs-tab-active:text-blue text-gray-800 dark:hs-tab-active:text-blue"
                       >Premium support</span
                     >
                     <span
-                      class="block mt-1 text-gray-800 dark:hs-tab-active:text-gray-200 dark:text-gray-200"
+                      class="block mt-1 text-gray-700 dark:hs-tab-active:text-gray-200"
                       >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime, a..</span
                     >
                   </span>
@@ -176,11 +176,11 @@
                   </svg>
                   <span class="grow ms-6">
                     <span
-                      class="block text-lg font-semibold hs-tab-active:text-blue text-gray-800 dark:hs-tab-active:text-blue-500 dark:text-gray-200"
+                      class="block text-lg font-semibold hs-tab-active:text-blue text-gray-800 dark:hs-tab-active:text-blue"
                       >A dervese selection</span
                     >
                     <span
-                      class="block mt-1 text-gray-800 dark:hs-tab-active:text-gray-200 dark:text-gray-200"
+                      class="block mt-1 text-gray-700 dark:hs-tab-active:text-gray-200"
                       >Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, dolores..</span
                     >
                   </span>
