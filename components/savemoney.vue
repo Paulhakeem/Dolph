@@ -12,7 +12,7 @@
             class="w-96"
           />
           </div>
-          <div id="button" class="flex text-center justify-center gap-4 px-2">
+          <div id="button" class="flex text-center justify-center gap-4 px-2 justify-items-center">
             <button
               class="flex justify-center gap-4 border border-1 border-light p-3 rounded-md w-52"
             >

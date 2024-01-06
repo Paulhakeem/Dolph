@@ -29,7 +29,8 @@ body {
     }
    #button {
     gap: 10px;
-    max-width: 24rem;
+    max-width: 20em;
+    padding-left: 4.5em;
    }
    #button1 p {
     padding-top: 1px;
